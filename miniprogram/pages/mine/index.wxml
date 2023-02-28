@@ -1,0 +1,65 @@
+<view>
+  <view class="mine-background">
+    <image class="img" src="{{userData.backgroundUrl}}" mode="aspectFill" wx:if="{{checkSession}}"></image>
+    <open-data class="img" type="userAvatarUrl" wx:else></open-data>
+    <view class="_shadow"></view>
+  </view>
+  
+  <scroll-view scroll-y class="mine-scroll" scroll-with-animation >
+    <view class="mine-hasinfo">
+      <view class="relative mine-top-box">
+        <view class="uerinfo">
+            <view class="avatar">
+              <image src="{{userData.userInfo.avatarUrl}}" class="avatar-img" wx:if="{{checkSession}}"></image>
+              <view class="avatar-img" wx:else><open-data class="img" type="userAvatarUrl"></open-data></view>
+            </view>
+            <view wx:if="{{checkSession}}">
+              <view class="nickname">
+                <text class="username">{{userData.userInfo.nickName}}</text>
+              </view>
+              <view class="nickSign" wx:if="{{userInfo.sign_text}}">{{userInfo.sign_text}}</view>
+            </view>
+            <view wx:else class="login-trigger" catchtap="goLogin">点击这里登录哟!</view>
+        </view>
+        <view class="userdata">
+            <view class="dataone" bindtap="getCourseEvent">
+              <text class="user-num" wx:if="{{!checkSession}}">0</text>
+              <text class="user-num"wx:if="{{checkSession}}">{{precent}}%</text>
+              <text class="user-font">学习进度</text>
+            </view>
+            <view class="dataone" bindtap="getCollectEvent">
+              <text class="user-num" wx:if="{{!checkSession}}">0</text>
+              <text class="user-num" wx:if="{{checkSession}}">{{userData.study_Status.Collection.length}}</text>
+              <text class="user-font">生词本</text>
+            </view>
+            <view class="dataone" bindtap="getTicketEvent">
+              <text class="user-num">0</text>
+              <text class="user-font">排行榜</text>
+            </view>
+            <view class="dataone" bindtap="getMessageEvent">
+              <text class="user-num {{userInfo.msg_count>0?'red':''}}">0</text>
+              <text class="user-font">浏览记录</text>
+            </view>
+        </view>
+        <view class="mine-learn-con">
+          <view class="item" hover-class="basic-hover" bindtap="interestEvent">
+            <view class="item-text">我的团队</view>
+          </view>
+          <view class="item" hover-class="basic-hover" bindtap="t">
+               <view class="item-text">测试入口</view>
+          </view>
+          <view class="transverse">
+            <button class="shareBtn item" hover-class="basic-hover" open-type="share" plain id="appShare">
+              <view class="item-text">分享应用</view>
+            </button>
+    
+            <view class="item" hover-class="basic-hover" bindtap="goToGuidesEvent">
+              <view class="item-text">个人设置</view>
+            </view>
+
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

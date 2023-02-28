@@ -1,0 +1,192 @@
+.mine-background{
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.mine-background>._shadow{
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 40%;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
+}
+.mine-background .img{
+  width: 100%;
+  height: 80vh;
+  filter: blur(2px);
+  transform: scale(1.1, 1.1);
+}
+
+.mine-scroll {
+  height:100vh;
+  position:absolute;
+  width:100%;
+  left:0;
+  top:0;
+  z-index:10;
+}
+
+.mine-hasinfo{
+  min-height: calc(100% - 35vh);
+  padding-top: 32vh;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  position: relative;
+  transition: transform 1s;
+}
+
+.mine-top-box {
+  position: relative;
+  background-color: white;
+}
+
+
+
+
+.uerinfo {
+  text-align: center;
+  padding-bottom: 60rpx;
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.avatar {
+  position: absolute;
+  top: -90rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.avatar-img {
+  display: inline-block;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 1000rpx;
+  background-color: #eaeaea;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+.avatar .img{
+  display: inline-block;
+  width: 170rpx;
+  height: 170rpx;
+  overflow: hidden;
+  border-radius: 1000rpx;
+}
+
+.nickname {
+  margin-top: 140rpx;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 45rpx;
+  font-weight: 500;
+  position: relative;
+}
+.username{
+  margin-top: 140rpx;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+
+.nickSign{ 
+  margin-top: 20rpx; 
+  font-size: 24rpx;  
+  color: #999999; }
+.login-trigger{
+  margin-top: 140rpx;
+  font-size: 38rpx;
+  text-align: center;
+}
+/*数据栏*/
+.userdata{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.dataone {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15rpx 0;
+  flex: 1;
+}
+
+.user-num {
+  font-weight: normal;
+  font-size: 32rpx;
+}
+.user-num.red{
+  color: #ff3e02;
+}
+.user-font{
+  color: #999999;
+  font-size: 22rpx;
+  display: inline-block;
+  margin-top: 6rpx;
+}
+
+/*功能格子*/
+.mine-learn-con {
+  padding: 60rpx 40rpx 40rpx;
+  margin-bottom: 200rpx;
+}
+
+.mine-learn-con .transverse .item{
+  margin-right: 8rpx !important;
+  font-size: 30rpx;
+  color: #630909;
+}
+.mine-learn-con .transverse .item:last-child{
+  margin-right: 0 !important;
+}
+
+.transverse{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item-text {
+  margin-left: 10rpx;
+}
+
+.mine-learn-con .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  padding: 0 50rpx;
+  border: 0 !important;
+  color: black !important;
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin-bottom: 8rpx;
+}
+.mine-learn-con .item.shareBtn {
+  width: auto !important;
+  min-width: unset;
+  border-radius: 0;
+}
+.mine-learn-con .item  .iconfont {
+  font-size: 46rpx;
+}
+.mine-learn-con .transverse .item .iconfont{
+  font-size: 42rpx;
+}
+.shareBtn::after, .shareBtn:before {
+  border: 0 !important;
+}
+.shareBtn .iconfont{
+  font-size: 40rpx;
+}
+
+

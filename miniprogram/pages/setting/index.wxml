@@ -1,0 +1,2 @@
+<!--pages/setting/index.wxml-->
+<button class="button" bindtap="exits">切换当前账号</button>

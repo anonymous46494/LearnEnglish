@@ -1,0 +1,98 @@
+
+.al{
+  background-image: linear-gradient(135deg, #242969 0%, #242969 100%);
+}
+
+.tui-mrbtm{
+  margin-bottom: 26rpx;
+  margin-right: 20rpx;
+  background: #5677fc !important;
+  color: #fff;
+}
+
+.aaaaa{
+  color: rgb(218, 218, 218);
+  margin-left: 20rpx;
+  font-size: 22rpx; 
+}
+.bb{
+  margin-left: -10rpx;
+  width: 120rpx;
+  height: 50rpx;
+}
+.bar{
+  display:flex;
+  justify-content: space-between;
+  width: 94%;
+  margin: 0 auto;
+}
+.txt{
+  margin-left: 20rpx;
+}
+
+.img{
+  width: 280rpx;
+  height: 110rpx;
+}
+.img1{
+  height: 420rpx;
+  border: solid rgb(168, 168, 168) 1rpx;
+  border-radius:50rpx;
+  margin: 0rpx auto;
+  margin-bottom: 50rpx;
+  background-image: url(https://6368-children-7gvrxtym1a4de9ef-1302133509.tcb.qcloud.la/scr/%E8%90%8C%E9%B8%A1%E5%B0%8F%E9%98%9F%E8%8B%B1%E6%96%87%E7%89%88%E7%AC%AC%E4%B8%80%E5%AD%A3/mengjixiaodui.jpg?sign=b06b93b05edc3cf903a6fd216abeebe2&t=1622174349);
+  background-size: cover;
+}
+.a{
+  margin-top: 270rpx;
+}
+.img2{
+  float: right;
+  margin-top: -80rpx;
+  margin-right: 20rpx;
+  opacity:0.7;
+}
+
+.mid{
+  width: 94%;
+  margin: 30rpx auto;
+}
+/* 推荐视频 */
+.other_list{
+  width: 94%;
+  margin: 0rpx auto;
+}
+
+.item_other{
+  height: 150rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  border-radius: 15rpx;
+  border: 1rpx rgb(26, 86, 216) solid;
+}
+
+.other_img_wrap{
+  width:38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other_img_wrap image{
+  width:100%;
+  border-radius: 15rpx;
+}
+
+.other_info{
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+.other_title{
+  font-size:25rpx;
+  color: #dbdada;
+  margin: 6rpx 0;
+}
+

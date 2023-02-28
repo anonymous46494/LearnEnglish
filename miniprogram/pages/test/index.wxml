@@ -1,0 +1,1 @@
+<button class="a" bindtap="a">解锁所有card卡片,退出小程序失效</button>

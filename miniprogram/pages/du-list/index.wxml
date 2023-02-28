@@ -1,0 +1,51 @@
+<view class="main">
+  <view class="video_info">
+    <video src="{{url}}"></video>
+      <view class="video_title" style="font-size:40rpx;color:black;font-family: 'Times New Roman';">
+        <view class="txt">
+          <view style="display: block;font-size: 30rpx;font-weight:bold;color: #fff; width: 94%;margin:0 auto;">{{episode}} {{title}}</view>
+          <view style="font-size: 25rpx;width: 94%;margin:10rpx auto;color: rgb(201, 197, 197);">{{data.about}}</view>
+          <view class="sticky-classify">
+            <scroll-view scroll-x class="sticky-tab-box" scroll-left="{{tabParams.left}}" scroll-with-animation="true" id="index-tab-box">
+              <view class="sticky-tab-single-box">
+                <text style="color: #fff" wx:for="{{catalogTile}}" wx:key="detail_id" class="sticky-tab-single {{current === index ? 'active' : ''}}"catchtap="changeMenuEvent" data-index="{{index}}">{{item.caption}}</text>
+              </view>
+            </scroll-view>
+          </view>
+        </view>
+      
+    </view>
+  </view>
+
+  <view class="other_list"  wx:if="{{current==0}}">
+    <view class="item_other" wx:for="{{data.episode}}" wx:key="this" bindtap="clickRow1" data-id="{{item.flage}}">
+      <view class="other_img_wrap" id='select_{{i}}'>
+        <image mode="widthFix" src="{{item.img}}"></image>
+      </view>
+      <view class="other_info">
+        <view class="other_title">{{item.episode}}</view>
+        <view class="other_title1">{{item.title}}</view>
+        <text class="nandu">难度:</text>
+          <image class="xingxing" wx:for="{{item.difficulty}}" wx:key="this" src="../../img/xx1.png"></image>
+          <image class="xingxing" wx:for="{{5-item.difficulty}}" wx:key="this"src="../../img/xx.png"></image>
+      </view>
+    </view>
+    <view style="text-align:center;">---暂时就这些资源啦没有更多了---</view>
+  </view>
+  <view wx:if="{{current==1}}">
+    <view class="other_list1">
+     <text class="one" decode="true">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.introduce.title}}
+     </text>
+     <image  class="image" src="{{data.introduce.img}}"></image>
+      <text class="two" decode="true">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.introduce.title1}}
+      </text>
+    </view>
+  </view>
+  <view wx:if="{{current==2}}">
+    <view class="other_list2">
+      视频来源于互联网,如有侵权请联系我们,我们将及时删除
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class="header">
+  <view class="search">
+    <icon type="search" size="25" color="">
+    </icon>
+    <input type="text" bindtap="search" value="点击搜索歌名" />
+  </view>
+</view>
+
+<view class="all">
+  <view class="card" wx:for="{{music}}" wx:for-item="item" wx:key="index" bindtap="goMusic" data-id="{{item.flage}}">
+    <view class="zheng_{{item.flage}}">
+    <image src='{{item.img}}'></image>
+    <text class="txt" wx:if="{{card_learned>=item.flage}}">(已解锁)</text>
+    </view>
+    <text >{{item.title}}</text>
+  </view>
+</view>

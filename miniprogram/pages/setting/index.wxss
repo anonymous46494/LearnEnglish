@@ -1,0 +1,6 @@
+.button{
+  background:#b89aff;
+  color: white;
+  border-radius: 8rpx;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+
+<view class="container">
+<swipe-action class="swipe" wx:for="{{word}}" data-id="{{item.id}}" actions="{{actions}}" toggle="{{toggle}}" unclosable="{{true}}" bindchange="handlerCloseButton"  wx:key="index" params="{{item}}">
+  <view slot="content" bindtap="goCard">
+    <view class="result1">
+      <view class="pic">
+        <image class="image1" src="{{item.img}}"></image>
+      </view>
+    <view class="text">
+      <view class="title">{{item.word}}</view>
+       <view class="info">
+        <text >释义: {{item.chinese}} </text>
+      </view>
+    </view>
+    </view>
+
+  </view>
+</swipe-action>
+</view>

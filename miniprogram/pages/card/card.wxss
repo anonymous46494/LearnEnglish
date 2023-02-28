@@ -1,0 +1,380 @@
+
+.text-success {
+  color: #1aad19;
+  font-size: 38rpx;
+  font-family: 'Times New Roman';
+  font-weight:bold;
+}
+
+.text-error {
+  color: #ff4444;
+  font-size: 38rpx;
+  font-family: 'Times New Roman';
+  font-weight:bold;
+}
+.xingxing{
+  margin-top: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.nandu{
+  display: block;
+  margin-bottom: -10rpx;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+
+.info{
+  margin-top: 150rpx;
+  line-height:30rpx;
+}
+
+.info1{
+  line-height:30rpx;
+}
+
+.page-number {
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.card-item {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.desc-color-1 {
+  color: #f29200;
+}
+
+.desc-color-2 {
+  color: #ee7500;
+}
+
+.desc-color-3 {
+  color: #14a83c;
+}
+
+.desc-color-4 {
+  color: #33c2d5;
+}
+
+.color-1 {
+  background: url('https://sj.tes-sys.com/web_resources/spell_card/card/card-1.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.color-2 {
+  background: url('https://sj.tes-sys.com/web_resources/spell_card/card/card-2.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.color-3 {
+  background: url('https://sj.tes-sys.com/web_resources/spell_card/card/card-3.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.color-4 {
+  background: url('https://sj.tes-sys.com/web_resources/spell_card/card/card-4.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.word-collect {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 99;
+}
+
+.word-content {
+  width: 70%;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Times New Roman';
+  float: left;
+  margin-left: 3%;
+}
+
+.word-content_1 {
+  margin-top: 30rpx;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-family: 'Times New Roman';
+}
+
+.word-content1 {
+  width: 25%;
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Times New Roman';
+  float: left;
+
+}
+
+.word-translate {
+  width: 70%;
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10rpx;
+  margin-left: 3%;
+  text-align: center;
+  font-family:'simsun';
+}
+
+.word-translate_1 {
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10rpx;
+  text-align: center;
+  font-family:'simsun';
+}
+
+.word-translate1 {
+  width: 25%;
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 10rpx;
+  text-align: center;
+  font-family:'simsun';
+}
+
+.card-action-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-action-area {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-action-desc {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.recording-play {
+  width: 100rpx;height: 100rpx;
+  
+  background-size: contain;
+}
+
+.recording-stop {
+  width: 100rpx;height: 100rpx;
+ 
+  background-size: contain;
+}
+
+.recording1{
+  width:100rpx;height:100rpx;
+  background-size: contain;
+}
+
+.recording1_hover{
+  width:100rpx;height:100rpx;
+  background-size: contain;
+}
+
+.write{
+  background-size: contain;
+}
+
+.current-page{
+  height: 100%;
+  opacity: 1;
+  transition: .4s;
+}
+
+.not-current-page{
+  height: 5%;
+  opacity: 0.4;
+  transition: .4s;
+}
+
+.imag{
+  width: 75%;
+  margin: 0 auto;
+  height: 380rpx;
+  margin-top: 150rpx;
+}
+
+.imag_hover{
+  width: 75%;
+  margin: 0 auto;
+  height: 380rpx;
+  margin-top: 150rpx;
+  animation-name: img;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.imag:hover{
+  width: 75%;
+  margin: 0 auto;
+  height: 380rpx;
+  margin-top: 150rpx;
+  animation-name: img;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+.imag1{
+  margin-top: 200rpx;
+  width: 67%;
+  height: 350rpx;
+  margin-left: 30rpx;
+}
+
+.imag1_hover{
+  margin-top: 200rpx;
+  width: 67%;
+  height: 350rpx;
+  margin-left: 30rpx;
+  animation-name: img;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+}
+
+.imag1:hover{
+  margin-top: 200rpx;
+  width: 67%;
+  height: 350rpx;
+  margin-left: 30rpx;
+  animation-name: img;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 2;
+}
+
+.mid{
+  display: flex;
+  width: 100%;
+  justify-content:space-between
+}
+
+.imag2{
+  margin-top: 400rpx;
+  border-radius:50%;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.imag2_hover{
+  margin-top: 400rpx;
+  border-radius:50%;
+  width: 150rpx;
+  height: 150rpx;
+  animation-name: img1;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 4;
+}
+
+.imag2:hover{
+  border-radius:50%;
+  width: 150rpx;
+  height: 150rpx;
+  animation-name: img1;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 4;
+}
+
+.tupian{
+width: 100%;
+height: 100%;
+}
+
+.pron-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pron-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.word-pron {
+  margin-left: 9rpx;
+  font-family: Chalkboard;
+  font-size: 36rpx;
+  color: #8F8F8F;
+}
+
+@keyframes img {
+  from {
+    transform: scale3d(1, 1, 2);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes img1 {
+  from {
+    transform: scale3d(1, 1, 2);
+  }
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,37 @@
+<view class="word_index_container">
+<view class="word_index_tabs">
+  <wux-tabs  defaultCurrent="tab1" theme="dark">
+    <wux-tab key="tab1" title="完成度"></wux-tab>
+  </wux-tabs>
+</view>
+
+
+<view class="word_index_circle">
+  <wux-circle percent="{{precent}}" sAngle = "270" size="{{winWidth * 0.8}}" strokeWidth="{{winWidth * 25/375}}"  color="#ff7eb3" backgroundColor="#e5e5e5" >
+  {{ precent + '%'}} 
+  </wux-circle>
+</view>
+
+<view class="word_index_task">
+  <view class='status'>
+    <wux-icon type='ios-radio-button-on' color="#ffffff" size="20"/> 
+    <text>{{card_learned}}</text>
+    <text>已解锁卡片</text>
+  </view>
+  <view class='status'>
+    <wux-icon type='ios-checkmark-circle' color="#ffffff" size="20"/>
+    <text>{{word_learned}}</text>
+    <text>已学习字词</text>
+  </view>
+  <view class='status'>
+    <wux-icon type='ios-close-circle' color="#ffffff" size="20"/>
+    <text>{{card_unlearn}}</text> 
+    <text>未解锁卡片</text>
+  </view>
+</view>
+
+<view class="add_start_btn">
+  <button class="word_start_study" role="button" bindtap="clickStudy">开始打卡学习</button>
+</view>
+
+</view>

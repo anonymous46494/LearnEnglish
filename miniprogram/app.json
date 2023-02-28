@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/index",
+    "pages/status/index",
+    "pages/test/index",
+    "pages/du-list/index",
+    "pages/card/card",
+    "pages/cai/index",
+    "pages/du_1/index",
+    "pages/about1/index",
+    "pages/du/index",
+    "pages/search/index",
+    "pages/netbook/index",
+    "pages/setting/index",
+    "pages/login/index",
+    "pages/card_1/index",
+    "pages/video/index",
+    "pages/video_1/index",
+    "pages/chatPage/chatPage",
+    "pages/about/index",
+    "custom-tab-bar/index",
+    "pages/player_1/index",
+    "pages/player/player",
+    "pages/welcome/welcome",
+    "pages/autoLogin/index"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "摸语英语",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/status/index",
+        "text": "学习乐园",
+        "iconPath": "./img/duck.png",
+        "selectedIconPath": "./img/duck1.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "学习乐园",
+        "iconPath": "./img/student.png",
+        "selectedIconPath": "./img/student1.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "个人",
+        "iconPath": "./img/mine.png",
+        "selectedIconPath": "./img/mine1.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "connectSocket": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "requiredBackgroundModes": ["audio"],
+  "plugins": {
+    "myPlugin": {
+      "version": "1.1.1",
+      "provider": "wxe5a00a1780c8eb95"
+    }
+  }
+}

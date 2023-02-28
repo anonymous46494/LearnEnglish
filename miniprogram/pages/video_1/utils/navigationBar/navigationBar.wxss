@@ -1,0 +1,11 @@
+.view-navigation-bg{
+  background: rgb(6, 76, 167);
+  position: fixed
+}
+.view-navigation-container{
+  position: fixed
+}
+.image-navigation-back{
+  position: absolute;
+  left: 0
+}

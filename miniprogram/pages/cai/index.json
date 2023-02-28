@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "拼一拼",
+  "usingComponents": {
+    "dialog": "/components/dialog/index"
+  }
+}

@@ -1,0 +1,48 @@
+<view class="main">
+  <view class="video_info">
+    <video src="{{url}}"></video>
+      <view class="video_title" style="font-size:40rpx;color:black;font-family: 'Times New Roman';">
+        <view class="txt">
+          <view style="display: block;font-size: 30rpx;font-weight:bold;color: #fff; width: 94%;margin:0 auto;">{{episode}} {{title}}</view>
+          <view style="font-size: 25rpx;width: 94%;margin:10rpx auto;color: rgb(201, 197, 197);">{{data.about}}</view>
+          <view class="sticky-classify">
+            <scroll-view scroll-x class="sticky-tab-box" scroll-left="{{tabParams.left}}" scroll-with-animation="true" id="index-tab-box">
+              <view class="sticky-tab-single-box">
+                <text style="color: #fff" wx:for="{{catalogTile}}" wx:key="detail_id" class="sticky-tab-single {{current === index ? 'active' : ''}}"catchtap="changeMenuEvent" data-index="{{index}}">{{item.caption}}</text>
+              </view>
+            </scroll-view>
+          </view>
+        </view>
+      
+    </view>
+  </view>
+
+  <view class="other_list"  wx:if="{{current==0}}">
+    <view class="item_other" wx:for="{{data.episode}}" wx:for-index="i" wx:for-item="content" wx:key="this" bindtap="clickRow1">
+      <view class="other_img_wrap" data-content='{{content}}' id='select_{{i}}'>
+        <image mode="widthFix" src="{{content.img}}"></image>
+      </view>
+      <view class="other_info">
+        <view class="other_title"  data-content='{{content}}'>{{content.episode}}</view>
+        <view class="other_title1"  data-content='{{content}}'>{{content.title}}</view>
+      </view>
+    </view>
+    <view style="text-align:center;">---暂时就这些资源啦没有更多了---</view>
+  </view>
+  <view wx:if="{{current==1}}">
+    <view class="other_list1">
+     <text class="one" decode="true">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.introduce.title}}
+     </text>
+     <image  mode="aspectFit" class="image" src="{{data.introduce.img}}"></image>
+      <text class="two" decode="true">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{data.introduce.title1}}
+      </text>
+    </view>
+  </view>
+  <view wx:if="{{current==2}}">
+    <view class="other_list2">
+      视频来源于互联网,如有侵权请联系我们,我们将及时删除
+    </view>
+  </view>
+</view>

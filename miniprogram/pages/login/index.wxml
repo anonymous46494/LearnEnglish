@@ -1,0 +1,25 @@
+<view class="login-container">
+    <view class="login-del">
+        <view class="login-logo">
+            <image mode="widthFix" class="img" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/login_ico.png"></image>
+        </view>
+        
+        <view class="login-tip">
+            <text>摸语英语</text>
+            <text>摸语般轻松学英语</text>
+        </view>
+        <view class="login-link" wx:if="{{step === 'one'}}">
+            <view class="_t">我们需要获取你有限的公开资料：</view>
+            <view class="_f">获取你的基本微信信息</view>
+            <view class="_f">收藏你喜欢的资料</view>
+            <button class="btn" loading="{{click}}" type="primary" bindtap="Login">微信登录</button>
+        </view>
+        <view class="login-link" wx:elif="{{step === 'two'}}">
+            <view class="_t">为了完美体验本小程序,我们需要获得你的一些手机权限：</view>
+            <view class="_f">获取你的麦克风权限</view>
+            <button class="btn" type="primary" bindtap="doSomeThingsNeedRecord"  loading="{{click}}">同意授权</button>
+            <button class="_btn"  bindtap="quixiao">稍后授权</button>
+
+        </view>
+    </view>
+</view>

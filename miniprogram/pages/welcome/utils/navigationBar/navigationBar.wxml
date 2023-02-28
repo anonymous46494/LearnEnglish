@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="view-navigation-bg" style="width:{{systemInfo.windowWidth}}px;height:{{menuButtonBoundingClientRect.bottom+10}}px;opacity:{{opacity}}">
+  </view>
+  <view class="view-navigation-container" style="width:{{systemInfo.windowWidth}}px;height:{{menuButtonBoundingClientRect.bottom+10}}px;">
+  </view>
+  <view class="image-navigation-back" style="width:100%;height:4vh;top:4vh;" catchtap="back2home">摸语英语</view>
+  <view style="width:100vh;height:10vh;">
+  </view>
+</view>

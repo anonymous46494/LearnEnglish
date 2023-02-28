@@ -1,0 +1,29 @@
+<view class="container">
+  <view class="tui-flex">
+    <view class="tui-cube-box" bindtap='log'>
+      <view class="tui-cube tui-cube-1">支持我们</view>
+      <view class="tui-cube tui-cube-2">摸语英语</view>
+      <view class="tui-cube tui-cube-3">支持我们</view>
+      <view class="tui-cube tui-cube-4">摸语英语</view>
+      <view class="tui-cube tui-cube-5">支持我们</view>
+      <view class="tui-cube tui-cube-6">摸语英语</view>
+    </view>
+
+  </view>
+  <view class="tui-content-box">
+    <view class="tui-content">尊敬的体验者，欢迎体验 摸语英语小程序！</view>
+    <view class="tui-content">该项目主要是我们在大二下半学期所制作的,主要是为了让儿童对学习英语产生兴趣</view>
+  
+    <view class="tui-content">该小程序因能力尚浅,可能存在缺陷或者bug，如果您在使用过程中发现问题或者有更好的建议，可反馈给我们。</view>
+    <view class="tui-content">
+      您可以通过反馈或者以下方式联系我！
+    </view>
+    <view class="tui-content tui-content-email" bindtap="kefu" >点击可直接发送消息</view>
+    <view class="tui-content tui-content-email" bindtap="copy" data-text="835418416">QQ交流群：835418416</view>
+    <view class="tui-footer">
+      <image src='cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/erweima.jpg' class="tui-applets" mode="widthFix" bindtap="sava"></image>
+      <view class="tui-footer-text" >长按可保存图片,分享至好友，您的朋友也可以体验本小程序</view>
+    </view>
+  </view>
+
+</view>

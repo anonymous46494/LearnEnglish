@@ -1,0 +1,33 @@
+
+<import src="/template/playbar/playbar-template.wxml" />
+
+
+<!-- 播放器 -->
+<view class="player-wrap" style="background-image: url({{playing.image||''}});">
+
+  <view class="player">
+    <view class="player-phonograph" hidden="{{isShowLyric}}">
+      <image class="player-stick {{isPlayState?'player-stick-turn':'player-disc-new'}}" src="../../img/stick.png" />
+      <view class="player-disc {{isPlayState?'player-disc-running':''}}" catch:longpress="fullImage" data-imgurl="{{playing.image||''}}">
+        <image class="player-img" mode="aspectFill" src="{{playing.image||'/img/chassis.png'}}" />
+        <image class="player-light" src="../../img/light.png" />
+        <image class="player-cover" src="../../img/cover.png" />
+      </view>
+    </view>
+    <view class="txt">{{playing.title}}</view>
+
+    <view class="player-toolbar">
+      <view class="player-progress">
+        <text>{{currentTime}}</text>
+        <slider backgroundColor="#ccc" activeColor="#f00" block-size="20" value="{{sliderValue}}" max="{{sliderMax}}" bind:change="dragProgressBar"></slider>
+        <text>{{duration}}</text>
+      </view>
+      <view class="player-bar">
+        <image src="../../img/bf_shang.png" class="icon-last" catch:tap="togglePlaying" data-id="-1"></image>
+        <image src="{{isPlayState?'../../img/bf_pause.png':'../../img/bf_play.png'}}" class="icon-play" catch:tap="togglePlayingState"></image>
+        <image src="../../img/bf_next.png" class="icon-next" catch:tap="togglePlaying" data-id="1"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,105 @@
+<block wx:if="{{flage==1}}">
+  <swiper interval="5000" previous-margin="50rpx" next-margin="50rpx" style="height:80vh;margin-top:5vh;" bindchange='changeItem'>
+    <block wx:for="{{word}}" wx:for-index="idx" wx:for-item="word" wx:key="item">
+      <swiper-item>
+        <view style='position:relative;box-sizing:border-box;width:auto;height:100%;padding:0 2vw;display:flex;align-items:flex-end;'>
+          <block>
+            <view class="card-item color-{{currentPageColor}}  {{current===idx?'current-page':'not-current-page'}}">
+              <image class='word-collect' bindtap="upCollect" src="../../img/{{hasCollected[current]==true?'word-collect':'no-collect'}}.png"></image>
+              <scroll-view scroll-y="true" style="text-align:center;" >
+              <view class="mid">
+                <view class="{{status?'imag1_hover':'imag1'}}" bindtap="PlayAudio">
+                  <image class="tupian" mode="scaleToFill" src="{{word['img']}}"></image>
+                </view >
+                <view class="{{status1?'imag2_hover':'imag2'}}" data-data="true" bindtap="PlayAudio1">
+                  <image class="tupian" mode="scaleToFill" src="{{word['img1']}}"></image>
+                </view>
+              </view>
+                <view>
+                  <view class='word-content' style="font-size:24px;" >{{word["word"]}}</view>
+                  <view class='word-content1' style="font-size:24px;">{{word["about_word"]}}</view>
+                </view>
+                <view>
+                  <view class='word-translate'>{{word["chinese"]}}</view>
+                  <view class='word-translate1'>{{word["about_chinese"]}}</view>
+                </view>
+                <view wx:if="{{scores>=0}}" class="info">
+                  <text class="nandu">发音准确度: <text class="{{scores>60?'text-success':'text-error'}}">{{scores}}</text> 分</text>
+                  <image class="xingxing" wx:key="this" wx:for="{{scores1}}" src="../../img/xx1.png"></image>
+                  <image class="xingxing" wx:key="this" wx:for="{{5-scores1}}" src="../../img/xx.png"></image>
+                </view>
+              </scroll-view>
+              <view class='card-action-area'>
+                <view class='card-action-item'>
+                  <image src="{{isRecordPlaying?'../../img/bfz.png':'../../img/bf.png'}}" class="recording-{{isRecordPlaying?'play':'stop'}}" bindtap='playRecording'></image>
+                  <view class='card-action-desc desc-color-{{currentPageColor}}'>我的录音</view>
+                </view>
+                <view class='card-action-item'>
+                  <image src="{{Recording?'../../img/mk2.png':'../../img/mk.png'}}" class="{{Recording?'recording1_hover':'recording1'}}" bind:longpress="startCe" bind:touchend="stopCe"></image>
+                  <view class='card-action-desc desc-color-{{currentPageColor}}'>测一测</view>
+                </view>
+                
+                <view class='card-action-item'>
+                  <image src="../../img/write.png" style="width: 100rpx;height: 100rpx;" bindtap="toWrite"></image>
+                  <view class='card-action-desc desc-color-{{currentPageColor}}'>写一写</view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </swiper-item>
+    </block>
+
+  </swiper>
+  <view class="page-number desc-color-{{currentPageColor}}">{{current+1}}/{{word.length}}</view>
+</block>
+
+<!-- 非字母页面 --->
+<block wx:elif="{{flage!=1}}">
+  <swiper interval="5000" previous-margin="50rpx" next-margin="50rpx" style="height:80vh;margin-top:5vh;" bindchange='changeItem'>
+    <block wx:for="{{word}}" wx:for-index="idx" wx:for-item="word" wx:key="item">
+      <swiper-item catch:touchmove="{{isRecording?'stopSwiper':''}}">
+        <view style='position:relative;box-sizing:border-box;width:auto;height:100%;padding:0 2vw;display:flex;align-items:flex-end;'>
+          <block>
+            <view class="card-item color-{{currentPageColor}}  {{current===idx?'current-page':'not-current-page'}}">
+              <image class='word-collect' bindtap="upCollect" data-id="{{word.id}}" src="../../img/{{hasCollected[current]?'word-collect':'no-collect'}}.png"></image>
+              <scroll-view scroll-y="true" style="text-align:center;">
+              <view  class="{{status1?'imag_hover':'imag'}}" bindtap="PlayAudio">
+                <image class="tupian" mode="scaleToFill" src="{{word['img']}}"></image>
+              </view>
+                  <view class='word-content_1' style="font-size:24px;" >{{word["word"]}}</view>
+                  <view class="pron-container">
+                    <image class="pron-icon" src="/img/pron-icon.png"></image>
+                    <text class="word-pron" bindtap="read">/{{word["symbol"]}}/</text>
+                  </view>
+                  <view class='word-translate_1'>{{word["chinese"]}}</view>
+                <view wx:if="{{scores>=0}}" class="info1">
+                  <text class="nandu">发音准确度: <text class="{{scores>60?'text-success':'text-error'}}">{{scores}}</text> 分</text>
+                  <image class="xingxing" wx:key="this" wx:for="{{scores1}}" src="../../img/xx1.png"></image>
+                  <image class="xingxing" wx:key="this" wx:for="{{5-scores1}}" src="../../img/xx.png"></image>
+                </view>
+              </scroll-view>
+              <view class='card-action-area'>
+                <view class='card-action-item'>
+                  <image src="{{isRecordPlaying?'../../img/bfz.png':'../../img/bf.png'}}" class="recording-{{isRecordPlaying?'play':'stop'}}" bindtap='playRecording'></image>
+                  <view class='card-action-desc desc-color-{{currentPageColor}}'>我的录音</view>
+                </view>
+                <view class='card-action-item'>
+                  <image src="{{Recording?'../../img/mk2.png':'../../img/mk.png'}}" class="{{Recording?'recording1_hover':'recording1'}}" bind:longpress="startCe" bind:touchend="stopCe"></image>
+                  <view class='card-action-desc desc-color-{{currentPageColor}}'>测一测</view>
+                </view>
+
+                <view class='card-action-item'>
+                  <image src="../../img/pingyiping.png" style="width: 100rpx;height: 100rpx;" bindtap="toPing"></image>
+                  <view class='card-action-desc desc-color-{{currentPageColor}}'>拼一拼</view>
+                </view>
+              </view>
+            </view>
+          </block>
+        </view>
+      </swiper-item>
+    </block>
+
+  </swiper>
+  <view class="page-number desc-color-{{currentPageColor}}">{{current+1}}/{{word.length}}</view>
+</block>

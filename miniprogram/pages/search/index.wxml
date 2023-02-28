@@ -1,0 +1,56 @@
+<view class="header">
+  <view class="search">
+    <icon type="search" size="25" color="">
+    </icon>
+    <input wx:if="{{flage=='music'}}" type="text" bindinput="searching" bindfocus="search" bindblur="searched" confirm-type="search" focus="true" bindconfirm="searchMusic" value="{{content}}" />
+    <input wx:if="{{flage=='card'}}" type="text" bindinput="searching" bindfocus="search" bindblur="searched" confirm-type="search" focus="true" bindconfirm="searchCard" value="{{content}}" />
+    <view wx:if="{{click}}" class="ico"  bindtap="onToggle">
+      <icon  type="clear" size="28"/>
+    </view>
+  </view>
+</view>
+<view class="result" wx:if="{{result&&flage=='music'}}" >
+    <view class="result1" wx:for="{{result}}" wx:for-item="item" wx:key="index"  wx:key="index" bindtap="goMusic" data-id="{{item._id}}" >
+      <view class="pic">
+        <image class="image1" src="{{item.image}}"></image>
+      </view>
+    <view class="text">
+      <view class="title">{{item.title}}</view>
+       <view class="info">
+        <text >歌手: {{item.singer}}</text>
+      </view>
+    </view>
+    </view>
+</view>
+<view class="result" wx:if="{{result&&flage=='card'}}" >
+    <view class="result1" wx:for="{{result}}" wx:for-item="item" wx:key="index"  wx:key="index" bindtap="goCard" data-id="{{item._id}}" >
+      <view class="pic">
+        <image class="image1" src="{{item.img}}"></image>
+      </view>
+    <view class="text">
+      <view class="title">{{item.word}}</view>
+       <view class="info">
+        <text >释义: {{item.chinese}} </text>
+      </view>
+    </view>
+    </view>
+</view>
+
+<view class="result" wx:if="{{result.length==0}}">
+  <block wx:if="{{num==-1}}">
+      未搜索到与 <text class="txt1">{{content}} </text> 
+      <text style="font-size: 30rpx;" wx:if="{{flage=='music'}}">相关歌曲</text>
+      <text style="font-size: 30rpx;" wx:if="{{flage=='card'}}">相关单词</text>
+      <image src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/load.gif"></image>
+  </block>
+  <block wx:if="{{num==0}}">
+    <view  wx:if="{{content!=''}}">
+      正在搜索与 <text class="txt1">{{content}} </text> 
+      <text style="font-size: 30rpx;" wx:if="{{flage=='music'}}">相关歌曲</text>
+      <text style="font-size: 30rpx;" wx:if="{{flage=='card'}}">相关单词</text>
+      <image src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/load.gif"></image>
+    </view>
+  </block>
+
+
+</view>

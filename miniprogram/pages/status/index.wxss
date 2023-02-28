@@ -1,0 +1,56 @@
+
+.word_index_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items:center;
+
+}
+
+.word_index_tabs{
+  width: 100%;
+}
+
+.word_index_circle{
+  text-align:center;
+  align-items:center;
+  position: fixed;
+  width: 100%;
+  top: 10%;
+}
+
+.word_index_task{
+  text-align:center;
+  align-items:center;
+  position: fixed;
+  width: 90%;
+  bottom: 28%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.status{
+  display: flex;
+  flex-direction: column;
+  font-size: 18rpx;
+}
+
+.add_start_btn{
+  width: 85%;
+  position: fixed;
+  bottom:  15%;
+}
+.word_start_study{
+  text-align:center;
+  align-items:center;
+  border-radius: 98rpx;
+  background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
+}
+
+.word_start_study::after{
+  border-radius: 98rpx;
+}
+text{
+  font-size: 35rpx;
+  font-weight:bold;
+}

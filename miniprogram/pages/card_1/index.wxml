@@ -1,0 +1,19 @@
+<view class="header">
+  <view class="search">
+    <icon type="search" size="25" color="">
+    </icon>
+    <input type="text" bindtap="search" value="点击搜索单词" />
+  </view>
+</view>
+
+<view class="all">
+  <view class="card" wx:for="{{card_list}}" wx:for-item="item" wx:key="index" bindtap="goCard" data-id="{{item.flage}}">
+    <view class="zheng_{{item.flage}}">
+    <image src='{{item.img}}'></image>
+    <text class="txt" wx:if="{{card_learned>=item.flage}}">(已解锁)</text>
+    </view>
+    <text >{{item.title}}</text>
+    <text style="margin-top:-5rpx;margin-bottom:3rpx;">{{item.chinese}}</text>
+  </view>
+</view>
+<button bindtap="aa">测试:暂时解锁全部卡片</button>

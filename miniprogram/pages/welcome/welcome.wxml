@@ -1,0 +1,8 @@
+<navigationBar id="navigationBar"></navigationBar>
+<swiper indicator-dots circular bindchange="changeSwiper">
+  <block wx:for="{{imgs}}" wx:for-index="index" wx:key="index">
+    <swiper-item class="swiper-items" >
+      <image class="swiper-image" src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>

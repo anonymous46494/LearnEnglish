@@ -1,0 +1,58 @@
+<view class="all">
+  <view class="video_info">
+    <video src="{{videoUrl}}" id="video" bindplay="bindplay" bindpause="bindpause"></video>
+  </view>
+
+  <view wx:for="{{english}}" class="reading_container" wx:key="index">
+  <view class="readingItem">
+    <view class="readingItem-content">
+      <view class="item-index">{{index+1}}/{{english.length}}</view>
+      <view wx:if="{{scores[index]}}">配音评分:{{scores[index]}}分</view>
+      <view class="readingItem-audio-content">
+        <image class="read-audio-icon" src="images/btn_read_videoPlay.png" id="{{index}}" bindtap="PlayVideo"></image>
+      <view class="read-audio-info">
+        <view wx:if="{{index==show}}" class="assessment-text">
+          <text wx:for="{{wordArr}}" wx:key="index" class="text-{{item.type}}">{{item.word}} </text>
+        </view>
+        <view wx:if="{{index!=show}}" class="assessment-text">
+          <text lass="text-error">.</text>
+        </view>
+        <text class="ri-content">{{item}}</text>
+        <text class="ri-en_content">{{chinese[index]}}</text>
+      </view>
+      </view>
+<!-- 底部 控制区域 -->
+    <view class="read-audio-control">
+      <progress percent="{{currentProgress}}" stroke-width="6" class="read-audio-progress" color="#1ECFA7"/>
+      <text class="read-audio-duration">{{size[index]/1000}}s</text>
+      <image wx:if="{{playUrl[index]}}" class="audio-listen" src="images/btn_read_listenS.png" bindtap="PlayUserAudio" id="{{index}}"></image>
+      <image wx:if="{{!playUrl[index]}}" class="audio-listen" bindtap="PlayUserAudio"></image>
+      <block wx:if="{{recording == false }}">
+        <image class="audio-record" src="images/btn_read_record.png" bindtap="startCe" id="{{index}}"></image>
+      </block>
+      <block wx:if="{{recording == true && index!=click }}">
+        <image class="audio-record" src="images/btn_read_record.png" bindtap="startCe" id="{{index}}"></image>
+      </block>
+      <block wx:if="{{recording == true && index==click}}">
+        <image class="audio-record" src="images/btn_read_record_stop.png" bindtap="stopCe" id="{{index}}"></image>
+       </block>
+    </view>
+    </view>
+  </view>
+  </view>
+  <view class="bottom">
+    <view class="item1">
+      <view class="item-index">当前配音总结</view>
+      <view class="cont">总分</view>
+      </view>
+    </view>
+  
+
+  <view class="submit" bindtap="tapSubmitReadingResult">
+    <text>完成！提交录音评分</text>
+  </view>
+</view>
+
+
+
+

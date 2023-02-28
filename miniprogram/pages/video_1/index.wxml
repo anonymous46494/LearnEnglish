@@ -1,0 +1,44 @@
+
+<view class="al">
+<view class="all">
+  <navigationBar id="navigationBar"></navigationBar>
+  <view class="bar">
+    <view class="txt">
+      <view style="font-size: 50rpx;font-weight:bold;color: #fff;margin-bottom:10rpx;">晚安故事</view>
+     <view style="color: rgb(201, 197, 197);">亲子时光 · 每晚助眠好故事</view>
+    </view>
+    <image class="img" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/video_ico.png"></image>
+  </view>
+
+  <view class="mid" bindtap="xiangqing">
+      <view class="img1">
+        <view class="a">
+          <image class="bb" src="../../img/tuijian.png"></image>
+          <view style="font-weight:bold">{{othersList[4].name}}</view>
+          <view  class="aaaaa">{{othersList[4].title}}</view>
+        </view>
+        <image class="img2" src="../../img/bangfang.png" style=" width:80rpx;height:80rpx;"></image>
+      </view>
+  </view>
+
+  <view class="other_list">
+    <view style="font-size: 40rpx;font-weight:bold;color: #fff;margin-bottom:10rpx;">晚安故事</view>
+    <view class="item_other" wx:for="{{othersList}}" wx:key="index" bindtap="clickRow" data-id="{{index}}">
+      <!-- 图片容器 -->
+      <view class="other_img_wrap">
+        <image mode="widthFix" src="{{othersList[index].img}}"></image>
+      </view>
+      <!-- 视频详情 -->
+      <view class="other_info">
+        <!-- 标题 -->
+        <view style="bold;color: #fff">{{othersList[index].name}}</view>
+        <view class="other_title">{{othersList[index].title}}</view>
+        <view class="other_title">{{othersList[index].about}}</view>
+      </view>
+    </view>
+    <view style="text-align:center;">---没有更多啦---</view>
+  </view>
+</view>
+
+</view>
+

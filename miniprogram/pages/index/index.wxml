@@ -1,0 +1,92 @@
+
+<view class="all">
+  <view class='container'>
+    <scroll-view style="display:flex;width:100%" scroll-y>
+    <view class="container1">
+      <swiper style="display: flex;flex-direction: column;justify-content: center;align-items: center;overflow:unset;width:100%;height:360rpx;margin-top:50rpx;" bindchange="changeSwiper" previous-margin="150rpx" next-margin="150rpx" autoplay="{{true}}" circular="{{true}}">
+        <block wx:for="{{list[0].imgList}}" wx:key="img">
+          <swiper-item class=" {{currentIndex == index ? 'swiperItemActive1': 'swiperItem1'}}">
+            <image mode="aspectFill" src='{{item}}' class="imageItem1 {{currentIndex == index ? 'active1': ''}}"> </image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    </scroll-view>
+
+  <view class="mid">
+    <view class="mid1" bindtap="jidanci">
+      <image class="img3" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/card.png"></image>
+      <text class="txt2">单词卡片</text>
+    </view>
+    <view class="mid1" bindtap="donghua">
+      <image class="img3" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/video.png"></image>
+      <text class="txt2">晚安故事</text>
+    </view>
+    <view class="mid1" bindtap="catalog">
+      <image class="img3" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/reading.png"></image>
+      <text class="txt2">欢乐配音</text>
+    </view>
+    <view class="mid1"  bindtap="music">
+      <image class="img3" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/儿歌电台.webp"></image>
+      <text class="txt2">儿歌电台</text>
+    </view>
+
+    
+  </view>
+  
+  <view class="bottom" wx:for="{{imgList}}" wx:key="txt">
+    <view class="bar">
+      <view class="a">
+        <image class="img" src="cloud://children-7gvrxtym1a4de9ef.6368-children-7gvrxtym1a4de9ef-1302133509/ico/视频.png"></image>
+        <text class="txt">{{item.title}}</text> 
+      </view>
+      <view class="b" bindtap="more_video" data-id="{{item.title}}">
+      <image class="img2" src="../../img/more.png"></image>
+      <text class="txt1">查看更多</text>
+      </view>
+    </view>
+    <view class="list" wx:if="{{index==0}}">
+      <scroll-view class="grids">
+      <view class="dd">
+        <view class="items" wx:for="{{list}}" wx:for-item="list" wx:key="index" bindtap="clickRow" data-id="{{list['video']}}">
+          <navigator  hover-stay-time="100">
+          <view class="item">
+            <image class="img1" src="{{list['图片']}}"></image>
+            <view>{{list['title']}}</view>
+          </view>
+        </navigator >
+      </view>
+      </view>
+    </scroll-view>
+    </view>
+    <view class="list" wx:if="{{index==1}}">
+      <scroll-view class="grids">
+      <view class="dd">
+        <view class="items" wx:for="{{list2}}" wx:for-item="list" wx:key="index" bindtap="clickRow1" data-id="{{list['video']}}">
+          <navigator  hover-stay-time="100">
+          <view class="item">
+            <image class="img1" src="{{list['图片']}}"></image>
+            <view>{{list['title']}}</view>
+          </view>
+        </navigator >
+      </view>
+      </view>
+    </scroll-view>
+    </view>
+    <view class="list1" wx:if="{{index==2}}">
+      <scroll-view class="grids">
+      <view class="dd">
+        <view class="items" wx:for="{{list1}}" wx:for-item="list" wx:key="index" bindtap="clickRow" data-id="{{list['video']}}">
+          <navigator  hover-stay-time="100">
+          <view class="item">
+            <image class="img1" src="{{list['图片']}}"></image>
+            <view>{{list['title']}}</view>
+          </view>
+        </navigator >
+      </view>
+      </view>
+    </scroll-view>
+    </view>
+  </view>
+  </view>
+</view>

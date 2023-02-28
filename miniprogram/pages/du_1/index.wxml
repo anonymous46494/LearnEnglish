@@ -1,0 +1,17 @@
+<view class="container">
+<view class="grids">
+      <view bindtap="clickRow" data-id="{{index}}" class="knows" wx:for="{{othersList}}" wx:key="index">
+        <view class="pic">
+          <image src="{{item.img}}"></image>
+        </view>
+        <view class="text">
+          <view class="title">{{item.title}}</view>
+          <view class="info">
+          <text class="nandu">难度:</text>
+          <image class="xingxing" wx:key="this" wx:for="{{item.difficulty}}" src="../../img/xx1.png"></image>
+          <image class="xingxing" wx:key="this" wx:for="{{5-item.difficulty}}" src="../../img/xx.png"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>

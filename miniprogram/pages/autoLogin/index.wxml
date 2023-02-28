@@ -1,0 +1,19 @@
+<!--pages/autoLogin/index.wxml-->
+
+<view class="container">
+  <view class='base'>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  <view class='cube'></view>
+  </view>
+</view>
+<text class="txt">正在登录...</text>
+
+
+

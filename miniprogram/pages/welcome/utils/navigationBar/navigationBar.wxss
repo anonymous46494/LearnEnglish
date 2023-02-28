@@ -1,0 +1,14 @@
+.view-navigation-bg{
+  background: rgb(6, 76, 167);
+  position: fixed
+}
+.view-navigation-container{
+  position: fixed;
+  background-image: linear-gradient(to right, #00dbde 0%, #ae00ff 100%);
+}
+.image-navigation-back{
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align:center
+}

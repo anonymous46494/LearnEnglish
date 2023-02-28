@@ -1,0 +1,104 @@
+.header{
+  height:100rpx;
+  display: flex;
+  padding-left:20rpx;
+  padding-right:20rpx;
+  align-items: center;
+  flex-direction: row;
+  background: #fff;
+}
+.ico{
+  margin-top: 10rpx;
+
+}
+.search{
+  width:100%;
+  height:70rpx;
+  background: rgb(245, 245, 245);
+  border-radius:30rpx;
+  padding-left: 20rpx;
+  display: flex;
+  align-items: center;
+}
+input{
+  font-size: 30rpx;
+  color: #888;
+  flex:1;
+  margin-left: 20rpx;
+}
+
+.cancel{
+  height:70rpx;
+  border-radius: 30rpx;
+  line-height: 70rpx;
+  border-color: #888;
+}
+.cancel{
+  height:70rpx;
+  border-radius: 30rpx;
+  line-height: 70rpx;
+  border-color: #888;
+}
+.container{
+  padding: 20rpx;
+}
+.title{
+  display: flex;
+  height:60rpx;
+  align-items: center;
+}
+.line{
+  height:40rpx;
+  width:10rpx;
+  background: #333;
+}
+.result{
+  margin-top: 10rpx;
+  padding-left:20rpx;
+  padding-right:20rpx;
+
+}
+
+.result1{
+  display: flex;
+  margin-bottom: 15rpx;
+  margin-top: 25rpx;
+  box-shadow: 17rpx 5rpx 17rpx rgba(10,16,20,.24),17rpx 5rpx 17rpx rgba(10,16,20,.12);
+  background-color: #fff;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: box-shadow .5s;
+  position: relative;
+}
+.result1:hover{
+  box-shadow: 0 8px 8px rgba(10,16,20,.12),0 0 8px rgba(10,16,20,1);
+  border: #eee 1rpx solid;
+  text-decoration: none;
+}
+
+.image1{
+  margin-top: 5rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius:50%;
+  border:1rpx rgba(32, 32, 32, 0.24) solid;
+}
+
+.text{
+ width: 440rpx;
+ margin-left: 30rpx;
+}
+.title{
+  font-size: 34rpx;
+  color: rgb(81, 81, 81);
+  line-height: 1.5;
+}
+.info{
+  font-size: 22rpx;
+  color: #888;
+}
+.txt1{
+  color: rgb(240, 5, 5);
+  font-size: 30rpx;
+}

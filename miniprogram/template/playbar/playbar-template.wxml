@@ -1,0 +1,16 @@
+<template name="playbarTemplate">
+
+  <view class="playbarTemplate" catch:tap="togglePlayingListShow">
+    <!-- 播放条 -->
+    <view class="playbar" wx:if="{{isShowPlayBar}}" catch:tap="toPages" data-to="player" data-id="{{playing.id}}">
+      <image class="playbar-image {{isPlayState?'playbar-image-rotate':''}}" src="{{playing.image||'/images/chassis.png'}}" mode="aspectFill"></image>
+      <view class="playbar-text">
+        <text>{{playing.title}}</text>
+        <text>{{playing.singer}}</text>
+      </view>
+      <view class="iconfont {{isPlayState?'icon-play':'icon-pause'}}" catch:tap="togglePlayingState"></view>
+      <view class="iconfont icon-playlist" catch:tap="togglePlayingListShow" data-type="show"></view>
+    </view>
+  </view>
+
+</template>

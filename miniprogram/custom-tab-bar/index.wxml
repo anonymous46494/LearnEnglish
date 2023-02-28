@@ -1,0 +1,2 @@
+
+<tui-tabbar tabBar="{{tabBar}}" hump="{{true}}" current="{{current}}" bind:click="tabbarSwitch" wx:key="text"></tui-tabbar>

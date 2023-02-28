@@ -1,0 +1,64 @@
+.playbarTemplate {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 100;
+}
+
+.playbar {
+  height: 80rpx;
+  background: #fff;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  border-top: 1px solid #eee;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.playbar-image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 20rpx;
+  border-radius: 50%;
+  animation: rotate 10s infinite linear paused;
+  flex-shrink: 0;
+}
+
+.playbar-image.playbar-image-rotate {
+  animation-play-state: running;
+}
+
+.playbar-text {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.playbar-text text {
+  max-width: 500rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.playbar-text text:last-child {
+  color: #333;
+  font-size: 20rpx;
+}
+
+.playbar .iconfont {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  padding: 0 15rpx;
+  flex-shrink: 0;
+}
+
+.playbar .icon-play, .playbar .icon-pause {
+  font-size: 44rpx;
+}
+

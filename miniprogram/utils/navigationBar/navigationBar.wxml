@@ -1,0 +1,8 @@
+<view class="container">
+
+  <view class="view-navigation-bg" style="width:{{systemInfo.windowWidth}}px;height:{{menuButtonBoundingClientRect.bottom+10}}px;opacity:{{opacity}}">
+  </view>
+
+  <view style="width:{{systemInfo.windowWidth}}px;height:{{menuButtonBoundingClientRect.bottom+10}}px;">
+  </view>
+</view>

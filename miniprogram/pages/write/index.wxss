@@ -1,0 +1,28 @@
+.handCenter {
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.handWriting {
+  background: #fff;
+  width: 100%;
+  margin: 10rpx auto;
+  height: 500rpx;
+
+}
+ 
+.img{
+  filter:alpha(opacity=5);
+  width: 90%;
+  height: 450rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+
+ 
+ 

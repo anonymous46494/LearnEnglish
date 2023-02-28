@@ -1,0 +1,134 @@
+/* pages/detail/detail.wxss */
+.xingxing{
+  width: 30rpx;
+  height: 30rpx;
+}
+.nandu{
+  margin-bottom: -10rpx;
+  margin-right: 10rpx;
+}
+.main{
+  background-image: linear-gradient(135deg, #242969 0%, #242969 100%);
+}
+/* 视频 */
+.video_info{
+  position: sticky;
+  top: 0rpx;
+}
+ video{
+  display: block;
+  width:100%;
+  margin: 0 auto;
+}
+.video_title{
+  justify-content:  space-between;
+  font-size: 35rpx;
+}
+.txt{
+  background-image: linear-gradient(135deg, #242969 0%, #242969 100%);
+}
+
+/* 推荐视频 */
+.other_list{
+  width: 94%;
+  margin:0rpx auto;
+}
+.other_list1{
+  width: 94%;
+  margin:0rpx auto;
+}
+.other_list2{
+  width: 94%;
+  margin:0rpx auto;
+  height: 60vh;
+}
+.one{
+  margin-bottom: 30rpx;
+  font-size: 33rpx;
+}
+.two{
+  font-size: 33rpx;
+}
+.image{
+  display: inline-block;
+  width: 100%;
+  margin: 20rpx auto;
+}
+.item_other{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  border-radius: 15rpx;
+  border: 1rpx red solid;
+}
+.other_img_wrap{
+  width:38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150rpx;
+}
+.other_img_wrap image{
+  width:90%;
+  border-radius: 15rpx;
+}
+
+.other_info{
+  width:60%;
+
+}
+.other_title{
+  margin-top: 20rpx;
+  font-size:30rpx;
+  color: #e06f93;
+  margin-bottom: 15rpx;
+}
+.other_title1{
+  font-size:25rpx;
+  color: #e06f93;
+  overflow: hidden;    
+  text-overflow:ellipsis;    
+  white-space:nowrap;
+}
+
+.sticky-tab-single-box{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 94%;
+  margin: 0 auto;
+}
+.sticky-tab-single{
+  display: inline-block;
+  vertical-align: top; 
+  padding-right: 30rpx;
+  order:0; 
+  position: relative; 
+  color: #000; 
+  font-size: 25rpx;
+}
+.sticky-tab-single::after{
+  color: #abaaaa;
+  font-size: 10px;
+}
+.sticky-tab-single.active{
+  color: #733429;
+  font-size: 28rpx;
+}
+.sticky-tab-single::before{
+  content: ""; 
+  position: absolute; 
+  left: 50%; 
+  margin: 0 auto; 
+  bottom: 0; 
+  width: 0; 
+  height: 6rpx; 
+  border-radius: 10rpx; 
+  background-color: #733429; 
+  transition: all 0.2s ease-out;
+}
+.sticky-tab-single.active::before{
+  width: 50%; left: 10%;
+}
+
+
